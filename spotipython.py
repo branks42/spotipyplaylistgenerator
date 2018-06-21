@@ -2,7 +2,7 @@ import sys
 import spotipy
 import spotipy.util as util
 
-#Searches 250 songs for the given keyword and returns a list of all of the tracks.
+#Searches 250 songs for the given keyword and returns a list of all of the tracks. Would like to search genre instead of song titles.
 def search(key, sp):
     results1 = sp.search(q=key, limit=50, offset=0, type='track')
     results2 = sp.search(q=key, limit=50, offset=50, type='track')
@@ -46,7 +46,7 @@ threshold = max - (max / 4)
 
 tracks = []
 
-#Adds tracks that are in the top 25 percent to the playlist //This needs work//.
+#Adds tracks that are in the top 25 percent to the playlist //This needs improvement//.
 for i in items:
     if i['popularity'] > threshold:
         tracks.append(i['id'])
