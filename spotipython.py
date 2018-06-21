@@ -38,7 +38,7 @@ for i in items:
         max = i['popularity']
         top_track = i
 
-playlist_name = key + " - Python"
+playlist_name = key + " - Python Generated"
 
 playlist = sp.user_playlist_create(username, playlist_name)
 
