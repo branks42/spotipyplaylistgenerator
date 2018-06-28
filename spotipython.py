@@ -9,7 +9,7 @@ def search(key, sp):
     results3 = sp.search(q=key, limit=50, offset=100, type='track')
     results4 = sp.search(q=key, limit=50, offset=150, type='track')
     results5 = sp.search(q=key, limit=50, offset=200, type='track')
-
+    # This is to circumvent Spotify API search limits
     result = results1['tracks']['items'] + results2['tracks']['items'] + results3['tracks']['items'] + results4['tracks']['items'] + results5['tracks']['items']
     
     return result
