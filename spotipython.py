@@ -2,7 +2,7 @@ import sys
 import spotipy
 import spotipy.util as util
 
-# Would like to search genre instead of song titles in future.
+# To be altered, currently finds top 250 results
 def search(key, sp):
     results1 = sp.search(q=key, limit=50, offset=0, type='track')
     results2 = sp.search(q=key, limit=50, offset=50, type='track')
